@@ -21,15 +21,12 @@ public class AspectsApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println(calculator.fibonacci(40));
+        System.out.println(calculator.fibonacci(40));
+        System.out.println(calculator.fibonacci(39));
+        System.out.println(calculator.fibonacci(41));
 
 		for(Map.Entry<Integer, Integer> pair : Calculator.histogram.entrySet()) {
             System.out.println(pair);
         }
-
-//        System.out.println(calculator.fibonacci(40));
-//
-//        for(Map.Entry<Integer, Integer> pair : Calculator.histogram.entrySet()) {
-//            System.out.println(pair);
-//        }
 	}
 }
