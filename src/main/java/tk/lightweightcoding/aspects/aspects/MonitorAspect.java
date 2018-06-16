@@ -10,9 +10,9 @@ import org.springframework.stereotype.Component;
 public class MonitorAspect {
     @Around("execution(@tk.lightweightcoding.aspects.annotations.Monitor * * (..))")
     public Object handleMonitoredFunction(ProceedingJoinPoint joinPoint) throws Throwable {
-        long startTiem = System.currentTimeMillis();
+        long startTime = System.currentTimeMillis();
         Object result = joinPoint.proceed();
-        System.out.println(String.format("Monitored function took: %s ms", System.currentTimeMillis() - startTiem));
+        System.out.println(String.format("Monitored function took: %s ms", System.currentTimeMillis() - startTime));
         return result;
     }
 }
