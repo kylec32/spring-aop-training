@@ -6,6 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import tk.lightweightcoding.aspects.services.Calculator;
 
+import java.util.Map;
+
 @SpringBootApplication
 public class AspectsApplication implements CommandLineRunner {
 
@@ -18,7 +20,16 @@ public class AspectsApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println(calculator.fibonacci(44));
-        System.out.println(calculator.fibonacci(44));
+		System.out.println(calculator.fibonacci(40));
+
+		for(Map.Entry<Integer, Integer> pair : Calculator.histogram.entrySet()) {
+            System.out.println(pair);
+        }
+
+//        System.out.println(calculator.fibonacci(40));
+//
+//        for(Map.Entry<Integer, Integer> pair : Calculator.histogram.entrySet()) {
+//            System.out.println(pair);
+//        }
 	}
 }
