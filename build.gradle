@@ -26,5 +26,6 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-aop')
+	compileOnly 'org.projectlombok:lombok:1.18.0'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
