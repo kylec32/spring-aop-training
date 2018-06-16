@@ -19,5 +19,6 @@ public class AspectsApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println(calculator.fibonacci(44));
+        System.out.println(calculator.fibonacci(44));
 	}
 }
