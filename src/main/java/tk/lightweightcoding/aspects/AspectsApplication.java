@@ -19,5 +19,14 @@ public class AspectsApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println(calculator.fibonacci(44));
+		System.out.println(calculator.fibonacci(44));
+		System.out.println(calculator.fibonacci(39));
+		System.out.println(calculator.fibonacci(100));
+
+		calculator.getHistogram().forEach((key, value) -> {
+			System.out.println(key + " - " + value);
+		});
+
+		//System.out.println(calculator.fibonacci(44));
 	}
 }
